@@ -1,25 +1,18 @@
 import axios from 'axios';
 
-const baseUrl = 'https://api.petfinder.com/breed.list?format=json&key=fd015e370fd0e8d52afa2ce02ef5708c&animal=cat';
+const catBreedUrl = 'https://api.petfinder.com/breed.list?format=json&key=fd015e370fd0e8d52afa2ce02ef5708c&animal=cat';
 const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
-const targetUrl = baseUrl;
+const petFindUrl = 'https://api.petfinder.com/pet.find?location=US&format=json&output=full&key=fd015e370fd0e8d52afa2ce02ef5708c&animal=cat';
+
 
 export default {
-    search: function() {
 
-        return axios.get(proxyUrl + targetUrl);
-        // return axios.get(baseURL, {
-        //     headers: {
-        //         'Access-Control-Allow-Origin': '*',
-        //         'Access-Control-Allow-Methods': 'OPTIONS, GET',
-        //         'Access-Control-Request-Method': '*',
-        //         'Access-Control-Allow-Headers': '*'
-        //       },
-        //       proxy: {
-        //         host: '104.236.174.88',
-        //         port: 3128
-        //       }
-        // });
+    searchCatBreed: () => {
+        return axios.get(proxyUrl + catBreedUrl);
+    }, 
+
+    searchPetFind: () => {
+        return axios.get(proxyUrl + petFindUrl);
     }
 }
 

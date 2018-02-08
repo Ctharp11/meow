@@ -1,29 +1,33 @@
-import React, { Component } from 'react';
+import React from 'react';
+import ListContainer from './components/ListContainer';
+import SittersContainer from './components/SittersContainer';
 import './App.css';
-import api from './utils/api';
+import {
+  BrowserRouter as Router,
+  Route,
+  Link
+} from 'react-router-dom'
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      kitty: []
-    }
-  }
+const App = () => {
 
-  searchAPI = () => {
-    api.search()
-    .then(res => console.log(res))
-    .catch(err => console.log(err));
-  }
-  
-  render() {
-    this.searchAPI()
     return (
-      <div className="App">
-        
-      </div>
-    );
-  }
+  <div>
+    <ListContainer />
+    <Router>
+    <div>
+      <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/sitters">Sitters</Link></li>
+      </ul>
+
+      <hr/>
+
+      <Route exact path="/" component={ListContainer}/>
+      <Route path="/sitters" component={SittersContainer}/>
+    </div>
+  </Router>
+  </div>
+  )
 }
 
 export default App;
