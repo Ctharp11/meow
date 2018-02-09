@@ -7,12 +7,12 @@ class ListContainer extends Component {
   constructor() {
     super();
     this.state = {
-      locations: [],
+      results: [],
       name: [],
       age: [], 
       breed: [],
-      descriptio: [],
-      media: [],
+      description: [],
+      photos: [],
       sex: [],
       contactPhone : [],
       contactState : [],
@@ -22,62 +22,78 @@ class ListContainer extends Component {
   }
 
   componentWillMount() { 
-    // this.searchCatBreed()
     this.petFind()
-    this.mapPets()
+    // this.mapPets()
   }
 
-  mapPets = () => {
-    api.searchPetFind()
-    .then(res => {
-      let response = res.data.petfinder.pets.pet;
-      response.map(data => {
-        let name = data.name.$t;
-        let age = data.age.$t;
-        let breed = data.breeds.breed.$t
-        let description = data.description.$t;
-        let media = data.media;
-        if (media.photos) {
-          // console.log('this one has photos')
-          let photo = media.photos.photo[0].$t;
-          // console.log(photo)
-        } else {
-          // console.log('this one doest have photos')
-          media = {photo: 'https://www.pexels.com/photo/adorable-animal-animal-world-cat-209037/'}
-          //  console.log(media.photo)
-        }
-        let sex = data.sex.$t;
-        let contactPhone = data.contact.phone.$t;
-        let contactState = data.contact.state.$t;
-        let contactCity = data.contact.city.$t;
-        let contactEmail = data.contact.email.$t;
-        console.log(contactCity);
-        return data;
-      })
-    })
-    return
-  }
+  // mapPets = () => {
+  //   api.searchPetFind()
+  //   .then(res => {
+  //     let response = res.data.petfinder.pets.pet;
+  //     let name = [];
+  //     let age = [];
+  //     let breed = [];
+  //     let description = [];
+  //     let photos = [];
+  //     let sex = [];
+  //     let contactPhone = [];
+  //     let contactState = [];
+  //     let contactCity = [];
+  //     let contactEmail = [];
+  //     response.map(data => {
+  //       name.push(data.name.$t);
+  //       age.push(data.age.$t);
+  //       breed.push(data.breeds.breed.$t);
+  //       description.push(data.description.$t);
+  //       let media = data.media;
+  //       if (media.photos) {
+  //         let photo = media.photos.photo[0].$t;
+  //         photos.push(photo);
+  //       } else {
+  //         media = {photo: 'https://www.pexels.com/photo/adorable-animal-animal-world-cat-209037/'}
+  //         photos.push(media.photo);
+  //       }
+  //       sex.push(data.sex.$t);
+  //       contactPhone.push(data.contact.phone.$t);
+  //       contactState.push(data.contact.state.$t);
+  //       contactCity.push(data.contact.city.$t);
+  //       contactEmail.push(data.contact.email.$t);
+  //       return data;
+  //     })
+  //     this.setState({name});
+  //     this.setState({age});
+  //     this.setState({breed});
+  //     this.setState({description});
+  //     this.setState({photos});
+  //     this.setState({sex});
+  //     this.setState({contactPhone});
+  //     this.setState({contactState});
+  //     this.setState({contactCity});
+  //     this.setState({contactEmail});
+  //   })
+  //   return
+  // }
 
   searchCatBreed = () => {
     api.searchCatBreed()
-    // .then(res => { console.log(res.data.petfinder.breeds.breed);})
-    // .then(res => this.setState({ name: res.data.petfinder.breeds.breed}))
+    // .then(res => { console.log(res.data.petfinder);})
+    // .then(results => this.setState({ results}))
     // .catch(err => console.log(err));
   }
 
   petFind = () => {
     api.searchPetFind()
-    
     // .then(res => { console.log(res.data.petfinder.pets.pet[0].name.$t);})
-    .then(res => this.setState({ name: res.data.petfinder.pets.pet[0].name.$t}))
-    .catch(err => console.log(err)); 
+    .then(results => this.setState({ results: results.data.petfinder.pets.pet}))
+    // .catch(err => console.log(err)); 
   }
   
   render() {
     return (
       <div className="container"> 
+        <h2> Adopt an Austin Kitty</h2>
         <ListItem 
-          name={this.state.name} 
+          results={this.state.results} 
         />
       </div>
     );

@@ -20,8 +20,8 @@ const Nav = () => {
             <h3 className="nav-title--sub"> The Purrfect Place for Cat Lovers </h3>
 
             <ul className="nav-list">
-                <li><Link className="nav-list-item" to="/">Home</Link></li>
-                <li><Link className="nav-list-item" to="/sitters">Sitters</Link></li>
+                <li><Link className="nav-list-item" to="/">Adopt</Link></li>
+                <li><Link className="nav-list-item" to="/sitters">Cat Sitters</Link></li>
             </ul>
 
       </div>
