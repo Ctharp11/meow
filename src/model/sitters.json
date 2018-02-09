@@ -1,0 +1,46 @@
+{
+"sitters": [
+    {
+        "name": "Mike Smith",
+        "rating": "4.8 stars",
+        "votes": "10",
+        "timeAvailable": "Mornings", 
+        "photo": "https://i2.cdn.turner.com/cnnnext/dam/assets/140926165711-john-sutter-profile-image-large-169.jpg"
+    },
+    {
+        "name": "David McSmith",
+        "rating": "4.7 stars",
+        "votes": "11",
+        "timeAvailable": "Mornings", 
+        "photo": "http://www.starkimages.com.au/wp-content/uploads/2012/05/JA-EXP-4.5.jpg"
+    },
+    {
+        "name": "Min An",
+        "rating": "4.5 stars",
+        "votes": "7",
+        "timeAvailable": "Mornings", 
+        "photo": "https://www.fotkaplus.co.uk/wp-content/uploads/2016/04/carousel-profile-4.jpg"
+    },
+    {
+        "name": "Asim Azat",
+        "rating": "4.8 stars",
+        "votes": "15",
+        "timeAvailable": "Evenings", 
+        "photo": "https://michiganross.umich.edu/sites/default/files/images/profiles/koustav-de.jpg"
+    },
+    {
+        "name": "Tim Savage",
+        "rating": "4.7 stars",
+        "votes": "18",
+        "timeAvailable": "Mornings", 
+        "photo": "https://www.bme.cornell.edu/engineering/customcf/iws_ai_faculty_display/ai_images/caa238-profile.jpg"
+    },
+    {
+        "name": "Mona Lisa",
+        "rating": "1 stars",
+        "votes": "5",
+        "timeAvailable": "Evenings", 
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/687px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg"
+    }
+]
+}

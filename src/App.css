@@ -6,6 +6,8 @@ blue: rgb(26,113,156)
 
 .nav {
     position: relative;
+    height: 20rem;
+    border-bottom: 1px solid #333;
 }
 
 .nav-title--main {
@@ -52,10 +54,34 @@ blue: rgb(26,113,156)
 
 .container {
     position: relative;
-    top: 20rem;
+    top: 5rem;
     left: 50%;
     transform: translate(-50%);
     width: 80%;
-    border: solid black;
-    height: 40rem;
+}
+
+.container-head {
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+.list-group {
+    border: 1px solid #333;
+    position: relative;
+    margin-bottom: 4rem;
+    list-style-type: none;
+    font-size: 1.4rem;
+}
+
+.name {
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+
+.img {
+    height: 250px;
+}
+
+.img-cat {
+    height: 100px;
 }
