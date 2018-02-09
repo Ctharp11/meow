@@ -1,7 +1,7 @@
 import React from 'react';
 
 const SittersContainer = () => {
-   return <div> Sitters </div>
+   return <div className="container"> Sitters </div>
 }
 
 export default SittersContainer;

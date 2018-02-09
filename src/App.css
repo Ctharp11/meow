@@ -1,0 +1,62 @@
+/* colors 
+orange: rgb(245,132,31)
+green: rgb(0,178,154)
+blue: rgb(26,113,156)
+*/
+
+.nav {
+    position: relative;
+}
+
+.nav-title--main {
+    position: absolute;
+    top: 1rem;
+    left: 10rem;
+    font-size: 6rem;
+    font-weight: 300;
+
+}
+
+.nav-title--sub {
+    position: absolute;
+    top: 10rem;
+    left: 10rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: uppercase;
+
+}
+
+.nav-list {
+    position: absolute;
+    top: 11rem;
+    right: 15rem;
+    list-style-type: none;
+    display: flex;
+}
+
+.nav-list-item:link,
+.nav-list-item:active,
+.nav-list-item:visited {
+  margin-right: 5rem;
+  text-decoration: none;
+  color: #333;
+  font-size: 2.5rem;
+  border: 1px solid #333;
+  padding: .5rem 1.5rem;
+}
+
+.nav-list-item:hover {
+    background-color: #333;
+    color: white;
+}
+
+.container {
+    position: relative;
+    top: 20rem;
+    left: 50%;
+    transform: translate(-50%);
+    width: 80%;
+    border: solid black;
+    height: 40rem;
+}

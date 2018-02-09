@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import api from '../utils/api';
+import ListItem from './ListItem';
+import '../App.css';
 
 class ListContainer extends Component {
   constructor() {
@@ -11,7 +13,7 @@ class ListContainer extends Component {
 
   searchCatBreed = () => {
     api.searchCatBreed()
-    .then(res => console.log(res.data.petfinder.breeds.breed))
+    .then(res => this.setState({ kitty: res.data.petfinder.breeds.breed}))
     .catch(err => console.log(err));
   }
 
@@ -25,10 +27,8 @@ class ListContainer extends Component {
     this.searchCatBreed()
     this.petFind();
     return (
-      <div className="ListContainer">
-
-         <h1> List Container </h1>
-        
+      <div className="container"> 
+        <ListItem props={this.state.kitty} />
       </div>
     );
   }
